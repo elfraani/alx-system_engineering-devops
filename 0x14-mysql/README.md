@@ -1,143 +1,138 @@
-```
-░█████╗░██╗░░██╗░░███╗░░░░██╗██╗░░░
-██╔══██╗╚██╗██╔╝░████║░░░██╔╝██║░░░
-██║░░██║░╚███╔╝░██╔██║░░██╔╝░██║░░░
-██║░░██║░██╔██╗░╚═╝██║░░███████║░░░
-╚█████╔╝██╔╝╚██╗███████╗╚════██║██╗
-░╚════╝░╚═╝░░╚═╝╚══════╝░░░░░╚═╝╚═╝
+# 0x14. MySQL 
 
-███╗░░░███╗██╗░░░██╗░██████╗░██████╗░██╗░░░░░
-████╗░████║╚██╗░██╔╝██╔════╝██╔═══██╗██║░░░░░
-██╔████╔██║░╚████╔╝░╚█████╗░██║██╗██║██║░░░░░
-██║╚██╔╝██║░░╚██╔╝░░░╚═══██╗╚██████╔╝██║░░░░░
-██║░╚═╝░██║░░░██║░░░██████╔╝░╚═██╔═╝░███████╗
-╚═╝░░░░░╚═╝░░░╚═╝░░░╚═════╝░░░░╚═╝░░░╚══════╝
-```
+<p align="center">
+  <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/KkrkDHT.png"
+</p>
 
+## Resource
 
+- [What is a database](https://searchdatamanagement.techtarget.com/definition/database)
+- [What is a database primary/replicate cluster](https://www.digitalocean.com/community/tutorials/how-to-choose-a-redundancy-plan-to-ensure-high-availability#sql-replication)
+- [MySQL primary/replicate setup](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- [Build a robust database backup strategy](https://www.databasejournal.com/ms-sql/developing-a-sql-server-backup-strategy/)
+- [Privileges Provided by MySQL](https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html#priv_replication-client) (***Replication Client***)
+- [Creating User for Replication](https://dev.mysql.com/doc/refman/8.0/en/replication-howto-repuser.html)
+- [Setting up replicas](https://dev.mysql.com/doc/refman/5.7/en/replication-setup-replicas.html) (***MySQL 5.7.x***)
 
-<br><br><br>
+## Tasks
 
-# Concepts
+<details>
+<summary>0. Install MySQL</summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/wMPwtg5K/image.png' border='0' alt='image'/></a>
+</details>
 
+<details>
+<summary>1. Let us in!</summary><br>
 
-
-For this project, we expect you to look at these concepts:
-
-* [Database administration](https://intranet.alxswe.com/concepts/49)
-* [Web stack debugging](https://intranet.alxswe.com/concepts/68)
-* [[How to] Install mysql 5.7](https://intranet.alxswe.com/concepts/100002)
-
-<br>
-
-![concept image](./images/concept.png)
-
-<br><br>
-
-# Resources
-
-### Read or watch:
-
-* [What is a primary-replica cluster](https://intranet.alxswe.com/rltoken/eojqG9FZbA6QVWN5P9cLzA)
-* [MySQL primary replica setup](https://intranet.alxswe.com/rltoken/z2KVk2UKLMc0RvHMdJmYLg)
-* [Build a robust database backup strategy](https://intranet.alxswe.com/rltoken/BharnxaLb-BDDYFywzME2Q)
-
-### man or help:
-
-* `mysqldump`
-
-<br><br>
-
-
-# Learning Objectives
-
-At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/Lotf0yqq3mNeFHkrW67CZQ), <b>without the help of Google:</b>
-
-### General
-
-* What is the main role of a database
-* What is a database replica
-* What is the purpose of a database replica
-* Why database backups need to be stored in different physical locations
-* What operation should you regularly perform to make sure that your database backup strategy actually works
-
-### Copyright - Plagiarism
-
-* You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-* You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-* You are not allowed to publish any content of this project.
-* Any form of plagiarism is strictly forbidden and will result in removal from the program.
-
-
-<br><br>
-
-
-# Requirements
-
-
-### General
-
-* Allowed editors: `vi`, `vim`, `emacs`
-* All your files will be interpreted on Ubuntu 16.04 LTS
-* All your files should end with a new line
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* All your Bash script files must be executable
-* Your Bash script must pass `Shellcheck` (version `0.3.7-5~ubuntu16.04.1` via `apt-get`) without any error
-* The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`
-* The second line of all your Bash scripts should be a comment explaining what is the script doing
-
-
-<br><br>
-
-# Tasks
-
-░░░░░░░░░░░░ <b>Mandatory Tasks</b> ░░░░░░░░░░░░
-
-<br><br>
-
-## 0. Install MySQL
-
-
-First things first, let’s get MySQL installed on <b>both</b> your web-01 and web-02 servers.
-
-* MySQL distribution must be 5.7.x
-* Make sure that [task #3](https://intranet.alxswe.com/rltoken/h8QknQcmmLf7oT8esoWgvg) of your [SSH project](https://intranet.alxswe.com/rltoken/Wx_BrR5Sk8s3Ywl44-33wg) is completed for `web-01` and `web-02`. The checker will connect to your servers to check MySQL status
-* Please make sure you have your `README.md` pushed to GitHub.
-
-Example:
-
-
-```
-ubuntu@229-web-01:~$ mysql --version
-mysql  Ver 14.14 Distrib 5.7.25, for Linux (x86_64) using  EditLine wrapper
-ubuntu@229-web-01:~$
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/zB1QFncd/image.png' border='0' alt='image'/></a>
+```sh
+mysql> CREATE USER 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+mysql> GRANT REPLICATION CLIENT ON *.* to 'holberton_user'@'localhost';
+mysql> FLUSH PRIVILEGES;
 ```
 
+</details>
 
+<details>
+<summary>2. If only you could see what I've seen with your eyes</summary><br>
 
-### Repo:
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/sgDm766T/image.png' border='0' alt='image'/></a>
+```sh
+mysql> CREATE DATABASE tyrell_corp;
+mysql> USE tyrell_corp;
+mysql> CREATE TABLE nexus6 (id INT, name VARCHAR(256));
+mysql> INSERT INTO nexus6 (id, name) VALUES ('1', 'Leon');
+mysql> GRANT SELECT ON tyrell_corp.nexus6 TO 'holberton_user'@'localhost';
+```
 
-* GitHub repository: `alx-system_engineering-devops`
-* Directory: `0x14-mysql`
+</details>
 
+<details>
+<summary>3. Quite an experience to live in fear, isn't it?</summary><br>
 
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/D0CmW3vT/image.png' border='0' alt='image'/></a>
+```sh
+msql> CREATE USER 'replica_user'@'%' IDENTIFIED BY 'password';
+mysql> GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost';
+mysql> GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
+```
 
+</details>
 
+<details>
+<summary>4. Setup a Primary-Replica infrastructure using MySQL</summary><br>
 
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/MKBBLGVn/09e83e914f0d6865ce320a47f2f14837a5b190b6.gif' border='0' alt='09e83e914f0d6865ce320a47f2f14837a5b190b6'/></a>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/9fkyDg7k/image.png' border='0' alt='image'/></a>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/Jhhb4DpP/image.png' border='0' alt='image'/></a>
+<a href='https://postimg.cc/4nLx8dpx' target='_blank'><img src='https://i.postimg.cc/28mLSL6h/image.png' border='0' alt='image'/></a>
 
-<br><br>
++ [MySQL primary configuration](./4-mysql_configuration_primary)
++ [MySQL replica configuration](./4-mysql_configuration_replica)
 
-<br><br>
+</details>
 
-<br><br>
+<details>
+<summary>5. MySQL backup</summary><br>
 
-<br><br>
+[![IMAGE ALT TEXT HERE](https://i.postimg.cc/3NtKg0gR/verizon.jpg)](https://www.youtube.com/watch?v=ANU-oSE5_hU)
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/J7YV5LfG/image.png' border='0' alt='image'/></a>
 
-<br><br>
+```sh
+ubuntu@03-web-01:~$ ls
+5-mysql_backup
+ubuntu@03-web-01:~$ ./5-mysql_backup mydummypassword
+backup.sql
+ubuntu@03-web-01:~$ ls
+01-03-2017.tar.gz  5-mysql_backup  backup.sql
+ubuntu@03-web-01:~$ more backup.sql
+-- MySQL dump 10.13  Distrib 5.7.25, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database:
+-- ------------------------------------------------------
+-- Server version   5.7.25-0ubuntu0.14.04.1
 
-<br><br>
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+--
+-- Current Database: `tyrell_corp`
+--
 
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `tyrell_corp` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
+USE `tyrell_corp`;
 
-░░░░░░░░░░░░ <b>Advanced Tasks</b> ░░░░░░░░░░░░
+--
+-- Table structure for table `nexus6`
+--
+
+DROP TABLE IF EXISTS `nexus6`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `nexus6` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+ubuntu@03-web-01:~$
+ubuntu@03-web-01:~$ file 01-03-2017.tar.gz
+01-03-2017.tar.gz: gzip compressed data, from Unix, last modified: Wed Mar  1 23:38:09 2017
+ubuntu@03-web-01:~$
+```
+
++ [Backup script](./5-mysql_backup)
+
+</details>
