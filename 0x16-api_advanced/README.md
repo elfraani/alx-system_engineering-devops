@@ -1,48 +1,28 @@
-# API advanced
+# 0x16. API advanced
 
-I continued to practice querying API's in this advanced project, this time
-working with the Reddit API.
+Welcome to the **0x16. API advanced** repository! This repository contains all the projects and tasks completed as a part of my journey as an expert software engineer, where I learned how to work with advanced operations and techniques of API. In this repository, you will find a series of tasks that will help you explore the world of APIs, such as data retrieval, parsing, and authentication.
 
-## Tests :heavy_check_mark:
+## Tasks
 
-* [tests](./tests): Folder of test files for all tasks. Provided by Holberton
-School.
+### [0. 0-subs.py](./0-subs.py)
+This task requires writing a function that queries the [Reddit API](https://www.reddit.com/dev/api/) and returns the number of subscribers of a given subreddit. 
 
-## Function Prototypes :floppy_disk:
+### [1. Top Ten](./1-top_ten.py)
+This task requires writing a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
 
-Prototypes for functions written in this project:
+### [2. Recurse it!](./2-recurse.py)
+This task requires writing a function that queries the Reddit API and returns a list of all hot articles recursively.
 
-| File           | Prototype                               |
-| -------------- | --------------------------------------- |
-| `0-subs.py`    | `def number_of_subscribers(subreddit)`  |
-| `1-top_ten.py` | `def top_ten(subreddit)`                |
-| `2-recurse.py` | `def recurse(subreddit, hot_list=[])`   |
-| `100-count.py` | `def count_words(subreddit, word_list)` |
+### [3. Count it!](./100-count.py)
+This task requires writing a function that queries the Reddit API, parses the title of all hot articles and prints a sorted count of given keywords.
 
-## Tasks :page_with_curl:
+## Usage
+To use the code in this repository, simply clone the repository and run the desired script in your terminal followed by the necessary arguments. For example, to execute the *0-subs.py* script, run the following command:
+```
+$ ./0-subs.py programming
+```
+This will return the number of subscribers for the *programming* subreddit.
 
-* **0. How many subs?**
-  * [0-subs.py](./0-subs.py): Python function that returns the total number of
-  subscribers for a given subreddit.
-  * Returns `0` if an invalid subreddit is given.
+## Conclusion
 
-* **1. Top Ten**
-  * [1-top_ten.py](./1-top_ten.py): Python function that prints the top ten
-  hottest posts for a given subreddit.
-  * Prints `None` if an invalid subreddit is given.
-
-* **2. Recurse it!**
-  * [2-recurse.py](./2-recurse.py): Python function that recursively returns a
-  list of titles for all hot articles on a given subreddit.
-  * Returns `None` if no results are found on the given subreddit.
-
-* **3. Count it!**
-  * [100-count.py](./100-count.py): Python function that recursively prints a
-  sorted count of given keywords parsed from titles of all hot articles on a given
-  subreddit.
-  * Keywords are case-insensitive and delimited by spaces.
-  * Results are printed in descending order by count.
-  * Words with identical counts are sorted alphabetically.
-  * Words with no matches are skipped.
-  * Results are based on the number of times a keyword appears - ie.,
-  `java java java` counts as three separate instances of `java`.
+This repository includes all the tasks required to learn advanced operations and techniques for working with APIs. By working through these projects, you will learn how to make API requests, parse JSON data, and automate repetitive tasks. Additionally, you will become familiar with working with some of the most popular APIs, such as Twitter and Wikimedia. Happy Learning!
